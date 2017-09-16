@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql:///cy_hiber</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+
+        <!-- 数据库的方言: -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.show_sql">true</property><!--显示sql-->
+        <property name="hibernate.format_sql">true</property><!--匹配sql-->
+        <property name="hibernate.hbm2ddl.auto">update</property><!--数据库更新格式-->
+        <!--映射,需要引入映射的配置文件-->
+        <mapping resource="com/cy/heberate/domain/Customer.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
