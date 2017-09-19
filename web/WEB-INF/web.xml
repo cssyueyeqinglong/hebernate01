@@ -3,4 +3,44 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <filter>
+        <filter-name>strus2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>strus2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>CustomerServlet</servlet-name>
+        <servlet-class>com.cy.heberate.serverlet.CustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerServlet</servlet-name>
+        <url-pattern>/saveCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CustomerListServlet</servlet-name>
+        <servlet-class>com.cy.heberate.serverlet.CustomerListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerListServlet</servlet-name>
+        <url-pattern>/customer_list</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FindLinkmanServlet</servlet-name>
+        <servlet-class>com.cy.heberate.serverlet.FindLinkmanServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindLinkmanServlet</servlet-name>
+        <url-pattern>/findLinkman</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddLinkmanServlet</servlet-name>
+        <servlet-class>com.cy.heberate.serverlet.AddLinkmanServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddLinkmanServlet</servlet-name>
+        <url-pattern>/addLinkServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

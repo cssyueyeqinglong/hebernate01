@@ -1,6 +1,10 @@
 package com.cy.heberate.domain;
 
-public class Customer {
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Customer implements Serializable{
     public Long getCust_id() {
         return cust_id;
     }
@@ -91,5 +95,15 @@ public class Customer {
     private String cust_linkman;
     private String cust_phone;
     private String cust_mobile;
+
+    public Set<Linkman> getLinkmens() {
+        return linkmens;
+    }
+
+    public void setLinkmens(Set<Linkman> linkmens) {
+        this.linkmens = linkmens;
+    }
+
+    private Set<Linkman> linkmens=new HashSet<>();
 
 }
