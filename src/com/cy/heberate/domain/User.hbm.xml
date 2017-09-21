@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cy.heberate.domain.User" table="cst_user">
+
+        <id name="user_id" column="user_id">
+            <generator class="native"/><!--主键的生成策略-->
+        </id>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+        <property name="name" column="name"/>
+    </class>
+</hibernate-mapping>

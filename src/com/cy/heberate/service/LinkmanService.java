@@ -24,6 +24,7 @@ public class LinkmanService {
         } catch (Exception e) {
             e.printStackTrace();
             transaction.rollback();
+            throw e;
         }
     }
 
