@@ -6,7 +6,8 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <!--注意，ContextLoaderListener默认只加载web_inf下面的配置文件，所以需要以下配全局参数，contextparam,从而加载applicationContext.xml-->
+    <!--注意，ContextLoaderListener默认只加载web_inf下面的配置文件，所以需要以下配全局参数，contextparam,从而加载applicationContext.xml
+    从而加载配置文件工厂类只需要初始化的时候new一次，然后全局就使用一个-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>

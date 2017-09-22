@@ -47,5 +47,9 @@
     <orderEntry type="library" name="ognl-3.0.6" level="project" />
     <orderEntry type="library" name="com.springsource.org.apache.commons.logging-1.1.1" level="project" />
     <orderEntry type="library" name="spring-web-4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-aop-4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-test-4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-aspects-4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="com.springsource.org.aspectj.weaver-1.6.8.RELEASE" level="project" />
   </component>
 </module>

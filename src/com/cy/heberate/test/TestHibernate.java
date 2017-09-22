@@ -2,17 +2,30 @@ package com.cy.heberate.test;
 
 import com.cy.heberate.domain.Customer;
 import com.cy.heberate.domain.Linkman;
+import com.cy.heberate.service.CustomerServiceImpl;
 import com.cy.heberate.utils.HibernateUtils;
-import com.mysql.jdbc.log.Log;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
-import java.util.logging.Logger;
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("classpath:applicationContext.xml")
 public class TestHibernate {
+
+    @Resource(name = "customerServiceImpl")
+    CustomerServiceImpl csi;
+
+    @Test
+    public void tests2j(){
+        csi.addCustomer();
+    }
+
     @Test
     public void testsave() {
         Session session = HibernateUtils.getHibernateSession();
